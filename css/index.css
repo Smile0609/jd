@@ -1,0 +1,197 @@
+#layout {
+  margin: 0px auto;
+  max-width: 640px;
+  min-width: 320px;
+  width: 100%;
+}
+#layout > #header {
+  width: 100%;
+  background-color: #0f0;
+}
+#layout > #header > .topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  z-index: 1;
+  height: 40px;
+}
+#layout > #header > .topbar > .icon-logo {
+  background-image: url(../images/sprites.png);
+  background-size: 200px 200px;
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background-position: 0 -103px;
+  left: 5px;
+}
+#layout > #header > .topbar > form {
+  width: 100%;
+  padding: 5px 50px 0 70px;
+  position: relative;
+}
+#layout > #header > .topbar > form > .icon-search {
+  background-image: url(../images/sprites.png);
+  background-size: 200px 200px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-position: -60px -109px;
+  top: 10px;
+  left: 75px;
+}
+#layout > #header > .topbar > form > input {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 25px;
+}
+#layout > #header > .topbar > .login {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  top: 10px;
+  color: #fff;
+}
+#layout > #slide {
+  overflow: hidden;
+  position: relative;
+}
+#layout > #slide > ul:first-child {
+  width: 1000%;
+  transform: translateX(-10%);
+}
+#layout > #slide > ul:first-child > li {
+  width: 10%;
+  float: left;
+}
+#layout > #slide > ul:first-child > li > a > img {
+  width: 100%;
+}
+#layout > #slide > ul:last-child {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -60px;
+}
+#layout > #slide > ul:last-child > li {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  float: left;
+  margin-left: 10px;
+}
+#layout > #slide > ul:last-child > li.active {
+  background-color: #fff;
+}
+#layout > #category {
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+#layout > #category > ul > li {
+  width: 25%;
+  float: left;
+}
+#layout > #category > ul > li > a > img {
+  width: 60%;
+  display: block;
+  margin: 0px auto;
+  margin-top: 5px;
+}
+#layout > #category > ul > li > a > p {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5px;
+}
+#layout > #main {
+  padding: 10px 5px;
+  background-color: #f0f0f0;
+}
+#layout > #main > .product {
+  margin-top: 10px;
+  background-color: #fff;
+}
+#layout > #main > .product > .product-title > .pull-left {
+  padding: 5px 0;
+}
+#layout > #main > .product > .product-title > .pull-left > .seckill-icon {
+  background-image: url(../images/seckill-icon.png);
+  width: 20px;
+  height: 25px;
+  background-size: 20px 25px;
+  float: left;
+}
+#layout > #main > .product > .product-title > .pull-left > .seckill-name {
+  float: left;
+  font-size: 14px;
+  margin-left: 10px;
+  color: #d8505c;
+}
+#layout > #main > .product > .product-title > .pull-left > .seckill-time {
+  float: left;
+  margin-left: 10px;
+}
+#layout > #main > .product > .product-title > .pull-left > .seckill-time span {
+  background-color: #000;
+  color: #fff;
+  float: left;
+  margin-left: 5px;
+  padding: 0 3px;
+}
+#layout > #main > .product > .product-title > .pull-left > .seckill-time span:nth-child(3n) {
+  color: #333;
+  background-color: #fff;
+}
+#layout > #main > .product > .product-title > .pull-right > .seckill-more {
+  font-size: 14px;
+  margin-right: 10px;
+  padding-top: 5px;
+  display: block;
+}
+#layout > #main > .product > .product-title > h3 {
+  font-weight: normal;
+  font-size: 16px;
+  position: relative;
+  padding-left: 15px;
+  border-bottom: 1px solid #ccc;
+  line-height: 30px;
+}
+#layout > #main > .product > .product-title > h3::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  background-color: #d8505c;
+  left: 8px;
+  top: 7px;
+}
+#layout > #main > .product > .product-content > ul > li {
+  width: 33.33%;
+  float: left;
+  border-left: 1px solid #ccc;
+}
+#layout > #main > .product > .product-content > ul > li > img {
+  width: 64%;
+  display: block;
+  margin: 0px auto;
+}
+#layout > #main > .product > .product-content > ul > li > p {
+  text-align: center;
+  font-size: 12px;
+}
+#layout > #main > .product > .product-content > ul > li > p:first-of-type {
+  color: #d8505c;
+}
+#layout > #main > .product > .product-content > ul > li > p:last-of-type {
+  text-decoration: line-through;
+}
+#layout > #main > .product > .product-content ul > li:first-child {
+  border-left: 0;
+}
+#layout > #main > .product > .product-content > a > img {
+  width: 100%;
+  display: block;
+}

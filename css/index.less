@@ -1,0 +1,214 @@
+#layout {
+    margin: 0px auto;
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    >#header {
+        width: 100%;
+        background-color: #0f0;
+        >.topbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-width: 640px;
+            min-width: 320px;
+            z-index: 1;
+            height: 40px;
+            >.icon-logo {
+                background-image: url(../images/sprites.png);
+                // 背景图压缩
+                // 因为设计师设计的图片是按照分辨率来设计的
+                // 我们页面上的是真实像素所以我们要对背景图压缩
+                // 一般压缩一倍(就是压缩到背景图自身大小的1/2)
+                background-size: 200px 200px;
+                position: absolute;
+                width: 60px;
+                height: 40px;
+                background-position: 0 -103px;
+                left: 5px;
+            }
+            >form {
+                width: 100%;
+                padding: 5px 50px 0 70px;
+                position: relative;
+                >.icon-search {
+                    background-image: url(../images/sprites.png);
+                    background-size: 200px 200px;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background-position: -60px -109px;
+                    top: 10px;
+                    left: 75px;
+                }
+                >input {
+                    width: 100%;
+                    height: 30px;
+                    border-radius: 15px;
+                    padding-left: 25px;
+                }
+            }
+            >.login {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                right: 0;
+                top: 10px;
+                color: #fff;
+            }
+        }
+    }
+    >#slide {
+        // 隐藏子元素溢出父元素区域的部分 就不会出现横向滚动条
+        overflow: hidden;
+        position: relative;
+        >ul:first-child {
+            width: 1000%; //父元素宽度的10倍 也就是屏幕宽度的10倍
+            //页面刚刚加载的时候就要显示第一张图对应的图
+            //所以先让位置移动到第一张图的位置
+            transform: translateX(-10%);
+            >li {
+                width: 10%; //父元素的宽度是1/10 也就是 一个屏幕的宽度
+                float: left;
+                >a>img {
+                    width: 100%;
+                }
+            }
+        }
+        >ul:last-child {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -60px;
+            >li {
+                width: 6px;
+                height: 6px;
+                border-radius: 3px;
+                border: 1px solid #fff;
+                float: left;
+                margin-left: 10px;
+            }
+            >li.active {
+                background-color: #fff;
+            }
+        }
+    }
+    >#category {
+        padding: 5px 0;
+        border-bottom: 1px solid #ccc;
+        >ul>li {
+            width: 25%;
+            float: left;
+            >a>img {
+                width: 60%;
+                display: block;
+                margin: 0px auto;
+                margin-top: 5px;
+            }
+            >a>p {
+                text-align: center;
+                font-size: 12px;
+                margin-top: 5px;
+            }
+        }
+    }
+    >#main {
+        padding: 10px 5px;
+        background-color: #f0f0f0;
+        >.product {
+            margin-top: 10px;
+            background-color: #fff;
+            >.product-title {
+                >.pull-left {
+                    padding: 5px 0;
+                    >.seckill-icon {
+                        background-image: url(../images/seckill-icon.png);
+                        width: 20px;
+                        height: 25px;
+                        // width: 16px;
+                        // height: 20px;
+                        background-size: 20px 25px;
+                        float: left;
+                    }
+                    >.seckill-name {
+                        float: left;
+                        font-size: 14px;
+                        margin-left: 10px;
+                        color: #d8505c;
+                    }
+                    >.seckill-time {
+                        float: left;
+                        margin-left: 10px;
+                        span {
+                            background-color: #000;
+                            color: #fff;
+                            float: left;
+                            margin-left: 5px;
+                            padding: 0 3px;
+                        }
+                        span:nth-child(3n) {
+                            color: #333;
+                            background-color: #fff;
+                        }
+                    }
+                }
+                >.pull-right {
+                    >.seckill-more {
+                        font-size: 14px;
+                        margin-right: 10px;
+                        padding-top: 5px;
+                        display: block;
+                    }
+                }
+                >h3 {
+                    font-weight: normal;
+                    font-size: 16px;
+                    position: relative;
+                    padding-left: 15px;
+                    border-bottom: 1px solid #ccc;
+                    line-height: 30px;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 3px;
+                        height: 12px;
+                        background-color: #d8505c;
+                        left: 8px;
+                        top: 7px;
+                    }
+                }
+            }
+            >.product-content {
+                >ul >li {
+                    width: 33.33%;
+                    float: left;
+                    border-left: 1px solid #ccc;
+                    >img {
+                        width: 64%;
+                        display: block;
+                        margin: 0px auto;
+                    }
+                    >p {
+                        text-align: center;
+                        font-size: 12px;
+                    }
+                    >p:first-of-type {
+                        color: #d8505c;
+                    }
+                    >p:last-of-type {
+                        text-decoration: line-through;
+                    }
+                }
+                ul>li:first-child {
+                    border-left: 0;
+                }
+                >a {
+                    >img {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

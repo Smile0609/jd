@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+    div {
+        width: 200px;
+        height: 200px;
+        padding: 50px;
+        margin: 0px auto;
+        box-sizing: border-box;
+        border:20px solid rgba(201,23,43,0.5);
+        /*背景裁切*/
+        /*background-clip:padding-box; */
+        /*content-box代表只有内容就是content部分有背景图*/
+        background-clip:padding-box; 
+        background-image: url(../images/buy-pro1.jpg);
+        /*背景定位的原点从盒模型的哪个位置开始 content-box从内容部分开始*/
+        -webkit-background-origin: padding-box;
+        background-origin: padding-box;
+        -webkit-background-size: 100px 100px;
+        background-size: 100px 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <div>1</div>
+</body>
+
+</html>

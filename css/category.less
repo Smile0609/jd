@@ -1,0 +1,140 @@
+html,
+body {
+    height: 100%;
+}
+
+#header {
+    position: absolute;
+    width: 100%;
+    >.topbar {
+        background: url(../images/header-bg.png) repeat-x;
+        height: 44px;
+        border-bottom: 1px solid #f0f0f0;
+        >.icon-back {
+            width: 40px;
+            height: 44px;
+            // 我们在移动端的a标签一般写的比较大为了好点击
+            // 如果背景图没有那么大的话我们才用padding的方式吧内容挤小
+            // 只在内容部分有背景
+            padding: 12px 10px;
+            position: absolute;
+            background-position: -20px 0;
+            // background-origin设置背景定位原点
+            /*背景定位的原点从盒模型的哪个位置开始 content-box从内容部分开始*/
+            background-origin: content-box;
+            /*背景裁切*/
+            /*background-clip:padding-box; */
+            /*content-box代表只有内容就是content部分有背景图*/
+            background-clip: content-box;
+            left: 0;
+            top: 0;
+        }
+        >form {
+            width: 100%;
+            padding: 5px 50px;
+            >input {
+                width: 100%;
+                height: 30px;
+                border-radius: 5px;
+                padding-left: 10px;
+                border: 1px solid #ccc;
+            }
+        }
+        >.icon-menu {
+            width: 40px;
+            height: 44px;
+            padding: 12px 10px;
+            position: absolute;
+            background-position: -60px 0;
+            right: 0;
+            top: 0;
+            // background-origin设置背景定位原点
+            /*背景定位的原点从盒模型的哪个位置开始 content-box从内容部分开始*/
+            background-origin: content-box;
+            /*背景裁切*/
+            /*background-clip:padding-box; */
+            /*content-box代表只有内容就是content部分有背景图*/
+            background-clip: content-box;
+        }
+    }
+}
+
+#category {
+    border:1px solid #ccc;
+    padding-top: 45px;
+    height: 100%;
+    >.category-left {
+        width: 90px;
+        float: left;
+        overflow: hidden;
+        height: 100%;
+        >ul {
+            width: 100%;
+            >li {
+                width: 100%;
+                height: 50px;
+                >a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    line-height: 50px;
+                    background-color: #f3f4f6;
+                    text-align: center;
+                    font-size: 14px;
+                    border-bottom: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                }
+                &.active {
+                    >a {
+                        background-color: #fff;
+                        color: #d8505c;
+                    }
+                }
+            }
+        }
+    }
+    >.category-right {
+        overflow: hidden;
+        height: 100%;
+        >.category-right-title {
+            >a {
+                width: 100%;
+                padding: 10px;
+                display: block;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+        >.category-right-content {
+            padding: 0 10px;
+            .product {
+                >.product-title {
+                    >h3 {
+                        font-size: 14px;
+                    }
+                }
+                >.product-content {
+                    >ul {
+                        >li {
+                            width: 33.33%;
+                            float: left;
+                            >a {
+                                >img {
+                                    width: 60px;
+                                    height: 60px;
+                                    display: block;
+                                    margin: 0px auto;
+                                }
+                                >p {
+                                    text-align: center;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

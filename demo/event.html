@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: #f40;
+    }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+    var div = document.querySelector('div');
+    div.addEventListener('click', function(e) {
+        console.log(e);
+    });
+    window.addEventListener('keydown', function(e) {
+        console.log(e);
+    })
+    </script>
+</body>
+
+</html>
